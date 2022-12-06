@@ -7,15 +7,16 @@
     text-align: center;
     font-size: 34px;
     font-weight: 700;
+    padding-bottom: 32px;
 }
 .images > .barberry > img, .images > .chilli > img, .images > .pepper > img, .images > .saffron > img{
-    width: 100px;
+    width: 200px;
     height: auto;
 }
 .images{
     display: flex;
     padding: 12px;
-    gap: 12px;
+    gap: 52px;
     align-items: center;
     justify-content: center;
 }
