@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;800&display=swap');
 *{
     border: 1px gray solid;
 }
@@ -16,9 +16,6 @@ body{
 }
 a{
     text-decoration: none;
-    color: white;
-    font-size: 12px;
-    font-weight: 100;
 }
 ul{
     padding: 0;
@@ -31,23 +28,73 @@ li{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    color: white;
     padding: 5px 150px;
 }
-.header .right-side ul{
+.right-side ul{
     display: flex;
     gap: 25px;
 }
-.header, .description-container{
-    background-color: rgb(4, 4, 34);
+.header, .description-container, .footer{
+    background-color: #1F2937;
 }
 .left-side{
-    font-size: 15px;
-    font-weight: 700;
+    font-size: 24px;
+    color: #F9FAF8;
+
 }
 .description-container, .information-container, .image-container, .quote-container{
     flex: 1;
 }
-.text{
-    color: white;
+.text .heading, .header .left-side, button{
+    color: #F9FAF8;
+}
+.text .heading{
+    font-size: 48px;
+    font-weight: 800;
+}
+a, .text .description{
+    color: #E5E7EB;
+    font-size: 18px;
+}
+button{
+    border-radius: 4px;
+    border: none;
+    padding: 3px 15px;
+}
+.information-container .heading{
+    font-size: 36px;
+    font-weight: 800;
+    color: #1f2937;
+}
+.quote-container, .description-container .image-container{
+    background-color: #e5e7eb;
+    text-align: center;
+}
+.sign-up-container, button{
+    background-color: #3882F6;
+
+}
+.sign-up-container{
+    margin: 30px 200px;
+}
+.sign-up-container button{
+    border: 1px #F9FAF8 solid;
+}
+.description-container{
+    display: flex;
+    padding: 60px 200px;
+    gap: 80px;
+}
+.text .heading, .text .description{
+    margin: 0;
+}
+.description-container .text, .description-container .image-container{
+    flex: 1;
+}
+.description-container .image-container{
+    display: flex;
+    justify-content: center;
+}
+.image-container p{
+    padding-top: 80px;
 }
