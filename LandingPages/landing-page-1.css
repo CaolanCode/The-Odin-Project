@@ -9,6 +9,11 @@ body{
     flex-direction: column;
     min-height: 100vh;
 }
+.page{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
 a{
     text-decoration: none;
     color: white;
@@ -39,4 +44,10 @@ li{
 .left-side{
     font-size: 15px;
     font-weight: 700;
+}
+.description-container, .information-container, .image-container, .quote-container{
+    flex: 1;
+}
+.text{
+    color: white;
 }
