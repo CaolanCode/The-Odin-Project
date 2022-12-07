@@ -1,13 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700;800&display=swap');
-*{
-    border: 1px gray solid;
-}
 body{
     margin: 0;
     font-family: Roboto, sans-serif;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 .page{
     flex: 1;
@@ -34,7 +33,7 @@ li{
     display: flex;
     gap: 25px;
 }
-.header, .description-container, .footer{
+.header, .description-container, .footer-container{
     background-color: #1F2937;
 }
 .left-side{
@@ -68,17 +67,22 @@ button{
 }
 .quote-container, .description-container .image-container{
     background-color: #e5e7eb;
-    text-align: center;
 }
 .sign-up-container, button{
     background-color: #3882F6;
-
 }
 .sign-up-container{
     margin: 30px 200px;
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+    border-radius: 10px;
+    align-items: center;
 }
 .sign-up-container button{
     border: 1px #F9FAF8 solid;
+    padding: 10px 30px;
+    margin-left: 100px;
 }
 .description-container{
     display: flex;
@@ -94,7 +98,73 @@ button{
 .description-container .image-container{
     display: flex;
     justify-content: center;
-}
-.image-container p{
     padding-top: 80px;
+}
+.information-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.images-text{
+    display: flex;
+    gap: 80px;
+    padding: 80px;
+}
+.images-text .image-container{
+    width: 150px;
+}
+.image-container .image{
+    height: 150px;
+    margin-bottom: 20px ;
+    border: 2px #3882F6 solid;
+    border-radius: 10px;
+}
+.image-container .text{
+    font-size: 15px;
+    color: #1F2937;
+    font-weight: 600;
+}
+.quote-container{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 300px;
+}
+.quote{
+    font-size: 36px;
+    font-style: italic;
+    font-weight: 500;
+    color: #1F2937;
+}
+.author-container{
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.author-container p{
+    font-size: 25px;
+    font-weight: 700;
+    margin: 0;
+} 
+.sign-up-text{
+    color: #E5E7EB;
+}
+.sign-up-text p{
+    margin: 0;
+    padding: 0;
+}
+.sign-up-text .heading{
+    font-size: 25px;
+    font-weight: 700;
+}
+.footer-container{
+    color: #E5E7EB;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.sign-up-section{
+    padding: 70px 0;
 }
