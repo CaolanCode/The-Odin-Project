@@ -11,27 +11,27 @@ function playRound(playerChoice, computerChoice){
             if(playerChoice == 'rock'){
                 return "It is a draw";
             } else if(playerChoice == 'scissors'){
-                return "You won!";
-            } else if(computerChoice == 'paper'){
-                return "You lost";
+                return "You lost, rock beats scissors!";
+            } else if(playerChoice == 'paper'){
+                return "You win, paper beats rock";
             }
             break;
         case 'paper':
             if(playerChoice == 'rock'){
-                return "You won!";
+                return "You lost, paper beats rock!";
             } else if(playerChoice == 'scissors'){
-                return "You lost";
-            } else if(computerChoice == 'paper'){
+                return "You win, scissors beats paper";
+            } else if(playerChoice == 'paper'){
                 return "It is a draw";
             }
            break;
         case 'scissors':
             if(playerChoice == 'rock'){
-                return "You lost";
+                return "You win, rock beats scissors";
             } else if(playerChoice == 'scissors'){
                 return "It is a draw";
-            } else if(computerChoice == 'paper'){
-                return "You won!";
+            } else if(playerChoice == 'paper'){
+                return "You lost, scissors beats paper!";
             }
            break;
         default:

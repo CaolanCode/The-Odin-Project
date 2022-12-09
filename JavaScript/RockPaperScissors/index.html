@@ -7,5 +7,12 @@
     <title>Document</title>
     <script src="rock-paper-scissors.js"></script>
   </head>
-  <body></body>
+  <body>
+    <script>
+      let playerChoice = prompt("Enter rock, paper or scissors").toLowerCase();
+      let computerChoice = getComputerChoice();
+      let result = playRound(playerChoice, computerChoice);
+      console.log(result);
+    </script>
+  </body>
 </html>
