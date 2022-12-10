@@ -3,6 +3,7 @@ if(rockBtn){
   rockBtn.addEventListener('click', () => {
     let computerChoice = getComputerChoice();
     let result = playRound('rock', computerChoice);
+    displayResult(result);
     console.log(result);
   } )
 }
@@ -12,6 +13,7 @@ if(paperBtn){
   paperBtn.addEventListener('click', () => {
     let computerChoice = getComputerChoice();
     let result = playRound('paper', computerChoice);
+    displayResult(result);
     console.log(result);
   } )
 }
@@ -21,6 +23,7 @@ if(scissorsBtn){
   scissorsBtn.addEventListener('click', () => {
     let computerChoice = getComputerChoice();
     let result = playRound('scissors', computerChoice);
+    displayResult(result);
     console.log(result);
   } )
 }
@@ -63,4 +66,13 @@ function playRound(playerChoice, computerChoice){
     default:
       return "Incorrect input";
   }
+}
+
+function displayResult(result){
+  const display = document.createElement('div');
+  display.style.cssText = "display:flex; align-items:center; justify-content:center;align-text:center; border:3px black solid; background-color:red; padding:20px;"
+  display.classList.add('display');
+  display.textContent = result;
+  document.body.appendChild(display);
+
 }
