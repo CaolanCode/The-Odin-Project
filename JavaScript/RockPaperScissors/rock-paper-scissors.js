@@ -1,3 +1,18 @@
+const scoreContainer = document.createElement('div');
+const playerScore = document.createElement('div')
+const computerScore = document.createElement('div')
+
+scoreContainer.classList.add('scoreContainer');
+scoreContainer.style.cssText = "display:flex; margin:100px 0;"
+playerScore.classList.add('playerScore');
+playerScore.style.cssText = "flex:1; background-color:red; border:2px black solid;";
+computerScore.classList.add('computerScore');
+computerScore.style.cssText = "flex=1; background-color:blue; border:2px black solid;"
+
+scoreContainer.appendChild(playerScore);
+scoreContainer.appendChild(computerScore);
+document.body.appendChild(scoreContainer);
+
 rockBtn = document.querySelector('#rock');
 if(rockBtn){
   rockBtn.addEventListener('click', () => {
