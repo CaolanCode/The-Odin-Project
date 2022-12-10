@@ -1,3 +1,30 @@
+rockBtn = document.querySelector('#rock');
+if(rockBtn){
+  rockBtn.addEventListener('click', () => {
+    let computerChoice = getComputerChoice();
+    let result = playRound('rock', computerChoice);
+    console.log(result);
+  } )
+}
+
+paperBtn = document.querySelector('#paper');
+if(paperBtn){
+  paperBtn.addEventListener('click', () => {
+    let computerChoice = getComputerChoice();
+    let result = playRound('paper', computerChoice);
+    console.log(result);
+  } )
+}
+
+scissorsBtn = document.querySelector('#scissors');
+if(scissorsBtn){
+  scissorsBtn.addEventListener('click', () => {
+    let computerChoice = getComputerChoice();
+    let result = playRound('scissors', computerChoice);
+    console.log(result);
+  } )
+}
+
 function getComputerChoice(){
   let allChoices = ['rock', 'paper', 'scissors']
   let choice = allChoices[Math.floor(Math.random()*allChoices.length)]
@@ -37,32 +64,3 @@ function playRound(playerChoice, computerChoice){
       return "Incorrect input";
   }
 }
-/*
-function game(){
-  for(let i = 0; i < 5; i++){
-    let computerChoice = getComputerChoice();
-    let result = playRound(playerChoice, computerChoice);
-    console.log(result);
-  }
-}
-*/
-const rock = document.querySelector('#rock');
-rock.addEventListener('click', () => {
-  let computerChoice = getComputerChoice();
-  let result = playRound('rock', computerChoice);
-  console.log(result);
-} )
-
-const paper = document.querySelector('#paper');
-paper.addEventListener('click', () => {
-  let computerChoice = getComputerChoice();
-  let result = playRound('paper', computerChoice);
-  console.log(result);
-} )
-
-const scissors = document.querySelector('#scissors');
-scissors.addEventListener('click', () => {
-  let computerChoice = getComputerChoice();
-  let result = playRound('scissors', computerChoice);
-  console.log(result);
-} )
