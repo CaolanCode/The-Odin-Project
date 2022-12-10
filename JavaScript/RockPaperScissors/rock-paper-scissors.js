@@ -37,12 +37,32 @@ function playRound(playerChoice, computerChoice){
       return "Incorrect input";
   }
 }
-
+/*
 function game(){
   for(let i = 0; i < 5; i++){
-    let playerChoice = prompt("Enter rock, paper or scissors").toLowerCase();
     let computerChoice = getComputerChoice();
     let result = playRound(playerChoice, computerChoice);
     console.log(result);
   }
 }
+*/
+const rock = document.querySelector('#rock');
+rock.addEventListener('click', () => {
+  let computerChoice = getComputerChoice();
+  let result = playRound('rock', computerChoice);
+  console.log(result);
+} )
+
+const paper = document.querySelector('#paper');
+paper.addEventListener('click', () => {
+  let computerChoice = getComputerChoice();
+  let result = playRound('paper', computerChoice);
+  console.log(result);
+} )
+
+const scissors = document.querySelector('#scissors');
+scissors.addEventListener('click', () => {
+  let computerChoice = getComputerChoice();
+  let result = playRound('scissors', computerChoice);
+  console.log(result);
+} )
