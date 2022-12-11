@@ -6,10 +6,10 @@ computerScore = document.createElement('div')
 scoreContainer.classList.add('scoreContainer');
 scoreContainer.style.cssText = "display:flex; margin:100px 0; align-items:center; justify-content:center;"
 playerScore.classList.add('playerScore');
-playerScore.style.cssText = "flex:1; background-color:red; border:2px black solid; font-size:40px; text-align:center;";
+playerScore.style.cssText = "flex:1; background-color:red; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;";
 playerScore.textContent = 0;
 computerScore.classList.add('computerScore');
-computerScore.style.cssText = "flex:1; background-color:blue; border:2px black solid; font-size:40px; text-align:center;"
+computerScore.style.cssText = "flex:1; background-color:blue; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;"
 computerScore.textContent = 0;
 
 scoreContainer.appendChild(playerScore);
