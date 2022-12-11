@@ -1,16 +1,18 @@
-scoreContainer = document.createElement('div');
+var scoreContainer = document.createElement('div');
 console.log(scoreContainer);
-playerScore = document.createElement('div')
-computerScore = document.createElement('div')
+var playerScore = document.createElement('div')
+var computerScore = document.createElement('div')
+var playerScoreboard = 0;
+var computerScoreboard = 0;
 
 scoreContainer.classList.add('scoreContainer');
 scoreContainer.style.cssText = "display:flex; margin:100px 0; align-items:center; justify-content:center;"
 playerScore.classList.add('playerScore');
 playerScore.style.cssText = "flex:1; background-color:red; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;";
-playerScore.textContent = 0;
+playerScore.textContent = playerScoreboard;
 computerScore.classList.add('computerScore');
 computerScore.style.cssText = "flex:1; background-color:blue; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;"
-computerScore.textContent = 0;
+computerScore.textContent = computerScoreboard;
 
 scoreContainer.appendChild(playerScore);
 scoreContainer.appendChild(computerScore);
@@ -58,15 +60,19 @@ function playRound(playerChoice, computerChoice){
       if(playerChoice == 'rock'){
           return "It is a draw";
       } else if(playerChoice == 'scissors'){
+          addComputerScore();
           return "You lost, rock beats scissors!";
       } else if(playerChoice == 'paper'){
+          addPlayerScore();
           return "You win, paper beats rock";
       }
       break;
     case 'paper':
       if(playerChoice == 'rock'){
+          addComputerScore();
           return "You lost, paper beats rock!";
       } else if(playerChoice == 'scissors'){
+          addPlayerScore();
           return "You win, scissors beats paper";
       } else if(playerChoice == 'paper'){
           return "It is a draw";
@@ -74,10 +80,12 @@ function playRound(playerChoice, computerChoice){
       break;
     case 'scissors':
       if(playerChoice == 'rock'){
+          addPlayerScore();
           return "You win, rock beats scissors";
       } else if(playerChoice == 'scissors'){
           return "It is a draw";
       } else if(playerChoice == 'paper'){
+          addComputerScore();
           return "You lost, scissors beats paper!";
       }
       break;
@@ -93,4 +101,15 @@ function displayResult(result){
   display.textContent = result;
   document.body.appendChild(display);
 
+}
+
+function addPlayerScore(){
+  playerScoreboard += 1;
+  playerScore.textContent = playerScoreboard;
+
+}
+
+function addComputerScore(){
+  computerScoreboard += 1;
+  computerScore.textContent = computerScoreboard;
 }
