@@ -1,19 +1,32 @@
 var scoreContainer = document.createElement('div');
-console.log(scoreContainer);
+var nameContainer = document.createElement('div');
 var playerScore = document.createElement('div')
 var computerScore = document.createElement('div')
+var computerName = document.createElement('div');
+var playerName = document.createElement('div');
 var playerScoreboard = 0;
 var computerScoreboard = 0;
 
 scoreContainer.classList.add('scoreContainer');
-scoreContainer.style.cssText = "display:flex; margin:100px 0; align-items:center; justify-content:center;"
+scoreContainer.style.cssText = "display:flex;"
+nameContainer.classList.add('nameContainer');
+nameContainer.style.cssText = "display:flex; margin-top:100px"
 playerScore.classList.add('playerScore');
 playerScore.style.cssText = "flex:1; background-color:red; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;";
 playerScore.textContent = playerScoreboard;
 computerScore.classList.add('computerScore');
-computerScore.style.cssText = "flex:1; background-color:blue; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;"
+computerScore.style.cssText = "flex:1; background-color:yellow; border:2px black solid; font-size:100px; height:50vh; display:flex; align-items:center; justify-content:center;"
 computerScore.textContent = computerScoreboard;
+playerName.classList.add('playerName');
+playerName.style.cssText = "flex:1; background-color:red; border:2px black solid; font-size:30px; display:flex; align-items:center; justify-content:center;";
+playerName.textContent = "Player";
+computerName.classList.add('computerName');
+computerName.style.cssText = "flex:1; background-color:yellow; border:2px black solid; font-size:30px; display:flex; align-items:center; justify-content:center;";
+computerName.textContent = "Computer";
 
+nameContainer.appendChild(playerName);
+nameContainer.appendChild(computerName);
+document.body.appendChild(nameContainer);
 scoreContainer.appendChild(playerScore);
 scoreContainer.appendChild(computerScore);
 document.body.appendChild(scoreContainer);
