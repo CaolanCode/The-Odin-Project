@@ -4,6 +4,7 @@ var playerScore = document.createElement('div')
 var computerScore = document.createElement('div')
 var computerName = document.createElement('div');
 var playerName = document.createElement('div');
+var display = document.createElement('div');
 var playerScoreboard = 0;
 var computerScoreboard = 0;
 
@@ -23,6 +24,9 @@ playerName.textContent = "Player";
 computerName.classList.add('computerName');
 computerName.style.cssText = "flex:1; background-color:yellow; border:2px black solid; font-size:30px; display:flex; align-items:center; justify-content:center;";
 computerName.textContent = "Computer";
+display.style.cssText = "display:flex; align-items:center; justify-content:center;align-text:center; border:2px black solid; background-color:yellow; padding:20px;"
+display.classList.add('display');
+display.textContent = "Result";
 
 nameContainer.appendChild(playerName);
 nameContainer.appendChild(computerName);
@@ -30,6 +34,7 @@ document.body.appendChild(nameContainer);
 scoreContainer.appendChild(playerScore);
 scoreContainer.appendChild(computerScore);
 document.body.appendChild(scoreContainer);
+document.body.appendChild(display);
 
 rockBtn = document.querySelector('#rock');
 if(rockBtn){
@@ -108,12 +113,7 @@ function playRound(playerChoice, computerChoice){
 }
 
 function displayResult(result){
-  const display = document.createElement('div');
-  display.style.cssText = "display:flex; align-items:center; justify-content:center;align-text:center; border:3px black solid; background-color:red; padding:20px;"
-  display.classList.add('display');
   display.textContent = result;
-  document.body.appendChild(display);
-
 }
 
 function addPlayerScore(){
