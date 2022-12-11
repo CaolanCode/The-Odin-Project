@@ -26,7 +26,7 @@ computerName.style.cssText = "flex:1; background-color:yellow; border:2px black 
 computerName.textContent = "Computer";
 display.style.cssText = "display:flex; align-items:center; justify-content:center;align-text:center; border:2px black solid; background-color:yellow; padding:20px;"
 display.classList.add('display');
-display.textContent = "Result";
+display.textContent = "Best out of five";
 
 nameContainer.appendChild(playerName);
 nameContainer.appendChild(computerName);
@@ -119,10 +119,15 @@ function displayResult(result){
 function addPlayerScore(){
   playerScoreboard += 1;
   playerScore.textContent = playerScoreboard;
-
+  if(playerScoreboard == 5){
+    location.reload();
+  }
 }
 
 function addComputerScore(){
   computerScoreboard += 1;
   computerScore.textContent = computerScoreboard;
+  if(computerScoreboard == 5){
+    location.reload();
+  }
 }
