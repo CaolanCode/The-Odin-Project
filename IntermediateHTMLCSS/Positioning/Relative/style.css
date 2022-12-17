@@ -15,6 +15,9 @@ body{
 .box1{
   background-color: yellow;
   flex:1;
+  position: relative;
+  right: 10px;
+  top: 50px;
 }
 .box2{
   background-color: red;
@@ -23,4 +26,7 @@ body{
 .box3{
   background-color: green;
   flex:1;
+  position: relative;
+  bottom: 50px;
+  left: 10px;
 }
