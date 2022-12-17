@@ -1,0 +1,25 @@
+body{
+  display: flex;
+  justify-content: center;
+  height: 200vh;
+}
+.container{
+  background-color: blue;
+  width: 500px;
+  padding: 30px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+}
+.box1{
+  background-color: yellow;
+  flex:1;
+}
+.box2{
+  background-color: red;
+  flex:1;
+}
+.box3{
+  background-color: green;
+  flex:1;
+}
