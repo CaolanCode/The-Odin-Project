@@ -11,10 +11,14 @@ body{
   height: 300px;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 .box1{
   background-color: yellow;
   flex:1;
+  position: absolute;
+  top: 100px;
+  right: 200px;
 }
 .box2{
   background-color: red;
@@ -23,4 +27,7 @@ body{
 .box3{
   background-color: green;
   flex:1;
+  position: absolute;
+  bottom: 100px;
+  left: 200px;
 }
