@@ -18,6 +18,24 @@ Animal.prototype.play = function(length){
   this.energy -= length;
 }
 
-const dog = new Animal('Rex', 7);
-dog.sleep(8);
-console.log(dog.energy);
+function Dog(name, energy, breed){
+  Animal.call(this, name, energy);
+  this.breed = breed;
+}
+
+Dog.prototype = Object.create(Animal.prototype);
+const rex = new Dog("Rex", 15, "Labrador");
+
+Dog.prototype.bark = function(){
+  console.log("woof woof");
+  this.energy -= 1;
+}
+
+Dog.prototype.constructor = Dog;
+
+console.log(rex.name);
+console.log(rex.breed);
+rex.play(3);
+console.log(rex.energy);
+rex.bark();
+console.log(rex.energy);
