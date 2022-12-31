@@ -6,7 +6,12 @@ function human(name){
     console.log(`${name} is feeling good`)
 
   }
-  sayHi()
-  sayHowYouFeel()
+  return{
+    sayHi,
+    sayHowYouFeel,
+  }
 }
-human('Bob')
+const bob = human("Bob")
+const qoli = human("Qoli")
+bob.sayHi()
+qoli.sayHowYouFeel()
