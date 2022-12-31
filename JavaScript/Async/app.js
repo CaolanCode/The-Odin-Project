@@ -1,9 +1,13 @@
-function orderPizza(){
-  console.log('order pizza')
+function orderPizza(callback){
   setTimeout( () => {
-    pizza = 'pizza'
+    const pizza = 'pizza'
+    callback(pizza)
   }, 2000)
-  console.log('pizza ordered')
 }
-const pizza = orderPizza()
-console.log(`Eat ${pizza}`) 
+// call-back function
+function pizzaReady(pizza){
+  console.log(`Eat the ${pizza}`)
+}
+
+orderPizza(pizzaReady)
+console.log("Call friend")
